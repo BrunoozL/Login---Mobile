@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Login.View.Login">
+
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF6347"
+                                  Offset="0.1"/>
+            <GradientStop Color="#98F5FF"
+                                  Offset="1.1"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text=""/>
+            <Label Text="MENU" HorizontalOptions="Center" FontSize="30"/>
+            <Frame CornerRadius="10"
+                   x:Name="frm_dados"
+                   VerticalOptions="CenterAndExpand"
+                   BackgroundColor="Transparent"
+                   BorderColor="White">
+                <StackLayout>
+                    <Label Text="LOGIN" HorizontalOptions="Center"/>
+                    <Label Text="Email"/>
+                    <Entry x:Name="txt_email"/>
+                    <Label Text="Senha"/>
+                    <Entry x:Name="txt_senha"/>
+                    <Button Text="Entrar" Clicked="Button_Clicked"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

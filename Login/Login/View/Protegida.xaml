@@ -2,11 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Login.View.Protegida">
+    <ContentPage.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#FF6347"
+                                  Offset="0.1"/>
+            <GradientStop Color="#98F5FF"
+                                  Offset="1.1"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame CornerRadius="10"
+                   x:Name="frm_dados"
+                   VerticalOptions="CenterAndExpand">
+
+                <StackLayout>
+                    <Label x:Name="lbl_boasvindas"/>
+                    <Button Text="Desconectar" Clicked="Button_Clicked"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
